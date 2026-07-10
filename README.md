@@ -7,6 +7,8 @@
 <a name="english"></a>
 # 🇬🇧 English
 
+**Live Demo:** [Click here to preview the UI directly in your browser!](https://uuhyy666.github.io/CodexManager/)
+
 **Codex Accounts Manager** is a simple yet powerful GUI tool designed to manage multiple Codex CLI accounts. It helps you seamlessly bypass rate limits by instantly switching between configured accounts using isolated authentication environments (`CODEX_HOME`).
 
 ## Features
@@ -44,6 +46,8 @@ No credentials or auth files are included in the public code. Everything is stor
 
 <a name="polski"></a>
 # 🇵🇱 Polski
+
+**Podgląd na żywo (Demo):** [Kliknij tutaj, aby przetestować interfejs prosto z przeglądarki!](https://uuhyy666.github.io/CodexManager/)
 
 **Codex Accounts Manager** to proste i potężne narzędzie z interfejsem graficznym (GUI), które służy do zarządzania wieloma kontami dla narzędzia Codex CLI. Pozwala na omijanie problemów z limitami zapytań (Rate Limits) poprzez błyskawiczne przeskakiwanie między różnymi, skonfigurowanymi kontami, używając odizolowanych środowisk dla autoryzacji (`CODEX_HOME`).
 

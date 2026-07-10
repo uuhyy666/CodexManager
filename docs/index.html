@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codex Accounts Manager</title>
+    <!-- Use a modern Google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <!-- Include icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <div class="logo">
+                    <i class="ri-robot-line"></i>
+                </div>
+                <h1>Codex<span>Manager</span></h1>
+            </div>
+            <div style="display: flex; gap: 1rem;">
+                <button class="add-btn" id="addAccountBtn">
+                    <i class="ri-add-line"></i> Add Account
+                </button>
+                <button class="btn-cancel" id="shutdownBtn" style="background: rgba(239, 68, 68, 0.2); color: #ef4444; border: 1px solid #ef4444;">
+                    <i class="ri-shut-down-line"></i> Wyłącz Serwer
+                </button>
+            </div>
+        </header>
+
+        <div class="dashboard-controls" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+            <div id="countdownDisplay" style="font-weight: 600; color: var(--success); font-size: 1.1rem;">
+                <!-- Odliczanie -->
+            </div>
+            <div style="display: flex; gap: 1rem;">
+                <button class="refresh-btn" id="autoRefreshBtn">
+                    <i class="ri-play-circle-line"></i> Włącz Auto-odświeżanie
+                </button>
+                <button class="refresh-btn" id="refreshBtn">
+                    <i class="ri-refresh-line"></i> Odśwież Status
+                </button>
+            </div>
+        </div>
+
+        <div class="accounts-grid" id="accountsGrid">
+            <!-- Accounts will be injected here via JS -->
+            <div class="loading-state">
+                <i class="ri-loader-4-line spinner"></i>
+                <p>Loading your accounts...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for adding account -->
+    <div class="modal-overlay" id="addModal">
+        <div class="modal">
+            <h2>Add New Account</h2>
+            <p>A new terminal window will open for you to log in securely to Codex.</p>
+            <div class="input-group">
+                <label for="accountName">Account Label (e.g. Work, Personal)</label>
+                <input type="text" id="accountName" placeholder="Enter an identifier...">
+            </div>
+            <div class="modal-actions">
+                <button class="btn-cancel" id="cancelAddBtn">Cancel</button>
+                <button class="btn-primary" id="confirmAddBtn">Authorize Login</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
