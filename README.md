@@ -1,6 +1,51 @@
-# Codex Accounts Manager
+# Codex Accounts Manager 🌍 (English & Polish)
 
-Codex Accounts Manager to proste i potężne narzędzie z interfejsem graficznym (GUI), które służy do zarządzania wieloma kontami dla narzędzia Codex CLI. Pozwala na omijanie problemów z limitami zapytań (Rate Limits) poprzez błyskawiczne przeskakiwanie między różnymi, skonfigurowanymi kontami, używając odizolowanych środowisk dla autoryzacji (`CODEX_HOME`).
+[English Version](#english) | [Wersja Polska](#polski)
+
+---
+
+<a name="english"></a>
+# 🇬🇧 English
+
+**Codex Accounts Manager** is a simple yet powerful GUI tool designed to manage multiple Codex CLI accounts. It helps you seamlessly bypass rate limits by instantly switching between configured accounts using isolated authentication environments (`CODEX_HOME`).
+
+## Features
+- 🔄 **Auto-Refresh & Live Status** - Automatically checks account limits and calculates the exact cooldown time.
+- ⚡ **Global Login (Use in CMD)** - With one click, switch your currently active account and use it across all terminals on your system.
+- 🔔 **Notifications & Sounds** - The app plays a sound and sends a Windows notification as soon as any blocked account becomes available.
+- 隔離 **Account Isolation** - Each connected account lives in its own secure folder, preventing session conflicts.
+
+## Requirements
+- Installed [Node.js](https://nodejs.org) environment.
+- Codex CLI application installed.
+
+## Installation
+1. Download or clone this repository to any location (e.g., Desktop).
+2. Open your terminal (CMD) inside the folder and run:
+   ```bash
+   npm install
+   ```
+
+## Quick Start
+The tool is optimized for maximum convenience. Simply double-click the **`Uruchom_Menedzer.bat`** file. 
+This will automatically start the background server and open the web dashboard at `http://localhost:3000` in your default browser.
+
+## Step-by-Step Guide
+1. Open the GUI and click **"Add Account"** in the top right corner.
+2. Enter a recognizable name (e.g., "Work Account" or an email address).
+3. The app will create a dedicated folder and launch `codex login` in the background. Follow the link in your terminal/browser to complete the authentication.
+4. Repeat this to gather all your accounts in one place.
+5. When your main account hits a rate limit, open the GUI, find an account labeled **Active**, and click **"Zaloguj w CMD"** (Login in CMD). This smoothly replaces the authentication token for your entire computer!
+
+## Security
+No credentials or auth files are included in the public code. Everything is stored 100% locally on your drive inside the hidden `.codex_data` folder and the `accounts.json` file.
+
+---
+
+<a name="polski"></a>
+# 🇵🇱 Polski
+
+**Codex Accounts Manager** to proste i potężne narzędzie z interfejsem graficznym (GUI), które służy do zarządzania wieloma kontami dla narzędzia Codex CLI. Pozwala na omijanie problemów z limitami zapytań (Rate Limits) poprzez błyskawiczne przeskakiwanie między różnymi, skonfigurowanymi kontami, używając odizolowanych środowisk dla autoryzacji (`CODEX_HOME`).
 
 ## Funkcje
 - 🔄 **Auto-odświeżanie i podgląd na żywo** - automatycznie sprawdza limity Twoich kont i wylicza czas odnowienia kredytów (wyświetla polską datę resetu).
@@ -35,4 +80,4 @@ To polecenie automatycznie uruchomi serwer w tle i po 2 sekundach otworzy w Twoj
 Żadne dane logowania ani pliki autoryzacyjne nie są dołączone do kodu publicznego. Wszystko przechowywane jest w 100% lokalnie na Twoim dysku w folderze, w którym wypakowałeś program (konta pojawią się w ukrytym katalogu `.codex_data` oraz w pliku `accounts.json`).
 
 ---
-_Aplikacja przygotowana dla programistów szukających wygodniejszego workflow z narzędziami AI._
+_Built for developers looking for a smoother workflow with AI tools. / Aplikacja przygotowana dla programistów szukających wygodniejszego workflow z narzędziami AI._

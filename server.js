@@ -3,6 +3,7 @@ const cors = require('cors');
 const { exec, spawn } = require('child_process');
 const fs = require('fs');
 const path = require('path');
+const os = require('os');
 const { v4: uuidv4 } = require('uuid');
 
 const app = express();
@@ -121,7 +122,7 @@ app.post('/api/accounts/:id/activate', (req, res) => {
     if (!acc) return res.status(404).json({ error: "Account not found" });
 
     const sourceAuth = path.join(acc.dir, 'auth.json');
-    const targetAuth = path.join('C:', 'Users', 'gruzb', '.codex', 'auth.json');
+    const targetAuth = path.join(os.homedir(), '.codex', 'auth.json');
 
     try {
         if (fs.existsSync(sourceAuth)) {
